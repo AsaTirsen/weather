@@ -98,7 +98,8 @@ class ForecastController implements ContainerInjectableInterface
             }
         }
         $data = [
-            "ipAdress" => $_SERVER['REMOTE_ADDR'],
+//            "ipAdress" => $_SERVER['REMOTE_ADDR'],
+            "ipAdress" => "82.183.6.103",
         ];
         $page->add("weather/weather_search", $data);
         return $page->render($data);
