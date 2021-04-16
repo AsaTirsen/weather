@@ -3,7 +3,7 @@
 namespace Asti\WeatherPackage;
 
 use Asti\Geoip\CurlService;
-use Asti\WeatherPackage\HelperFunctions;
+use Asti\Ipcheck\HelperFunctions;
 
 class WeatherService
 {
