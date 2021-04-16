@@ -1,6 +1,6 @@
 <?php
 
-namespace Asti\Weather;
+namespace Asti\WeatherPackage;
 
 use Asti\Mock\ipResMock;
 use Asti\Geoip\GeoipService;

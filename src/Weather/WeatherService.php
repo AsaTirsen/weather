@@ -1,9 +1,9 @@
 <?php
 
-namespace Asti\Weather;
+namespace Asti\WeatherPackage;
 
 use Asti\Geoip\CurlService;
-use Asti\Weather\HelperFunctions;
+use Asti\WeatherPackage\HelperFunctions;
 
 class WeatherService
 {
@@ -46,6 +46,7 @@ class WeatherService
         $curl = new CurlService();
         $help = new HelperFunctions();
         $res = $curl->getDataThroughCurl($this->getUrl() . "?" . "lat=" . $lat . "&lon=" . $lon . "&units=metric" . "&lang=sv" . "&appid=" . $this->getKey());
+        error_log(gettype($res));
         if (isset($res["cod"])) {
             return [
                 "Error" => "Platsangivelse är fel"

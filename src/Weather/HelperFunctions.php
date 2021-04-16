@@ -1,6 +1,6 @@
 <?php
 
-namespace Asti\Weather;
+namespace Asti\WeatherPackage;
 
 
 /**

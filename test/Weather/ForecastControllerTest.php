@@ -1,6 +1,6 @@
 <?php
 
-namespace Asti\Weather;
+namespace Asti\WeatherPackage;
 
 use Anax\DI\DIFactoryConfig;
 use PHPUnit\Framework\TestCase;

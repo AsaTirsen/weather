@@ -1,9 +1,9 @@
 <?php
 
-namespace Asti\Weather;
+namespace Asti\WeatherPackage;
 
 use Asti\Geoip\GeoipService;
-use Asti\Ipcheck\HelperFunctions;
+use Asti\WeatherPackage\HelperFunctions;
 use Anax\Commons\ContainerInjectableInterface;
 use Anax\Commons\ContainerInjectableTrait;
 
