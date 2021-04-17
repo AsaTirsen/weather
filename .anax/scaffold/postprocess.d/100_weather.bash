@@ -8,7 +8,7 @@ rsync -av vendor/asti/weather/config ./
 rsync -av vendor/asti/weather/view ./
 
 # copy the src directory
-rsync -av vendor/artes/weather/src ./
+rsync -av vendor/asti/weather/src ./
 
 # copy the test directory
-rsync -av vendor/artes/weather/test ./
+rsync -av vendor/asti/weather/test ./
