@@ -1,6 +1,6 @@
 <?php
 
-namespace Asti\WeatherPackage;
+namespace Asti\Weather;
 
 use Asti\Geoip\CurlService;
 use Asti\Ipcheck\HelperFunctions;

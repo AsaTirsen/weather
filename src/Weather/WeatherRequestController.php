@@ -1,6 +1,6 @@
 <?php
 
-namespace Asti\WeatherPackage;
+namespace Asti\Weather;
 
 use Anax\Commons\ContainerInjectableInterface;
 use Anax\Commons\ContainerInjectableTrait;
