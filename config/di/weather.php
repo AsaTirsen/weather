@@ -16,7 +16,7 @@ return [
             // Create the service, load its configuration (if any)
             // and set it up.
             "callback" => function () {
-                $weatherService = new \Asti\WeatherPackage\WeatherService();
+                $weatherService = new \Asti\Weather\WeatherService();
 
                 // Load the configuration files
                 $cfg = $this->get("configuration");
