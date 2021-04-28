@@ -6,3 +6,4 @@ memory::
 composer.lock
 .phpunit.result.cache
 /test/cache/
+**/config/weather.php
