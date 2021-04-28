@@ -11,13 +11,13 @@ composer require asti/weather ^1.0.6
 ## Manually:
 #### From the root of your Anax repo run:
 
-rsync -av vendor/asti/weather/config ./
+        rsync -av vendor/asti/weather/config ./
 
-rsync -av vendor/asti/weather/view ./
+        rsync -av vendor/asti/weather/view ./
 
-rsync -av vendor/asti/weather/src ./
+        rsync -av vendor/asti/weather/src ./
 
-rsync -av vendor/asti/weather/test ./
+        rsync -av vendor/asti/weather/test ./
 
 ## Or simply: 
 
