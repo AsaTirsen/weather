@@ -1,40 +1,44 @@
-# weather
-Anax module for weather services and IP validation
-This module has been created for the course Webbaserade ramverk och designmönster at Blekinge Tekniska Högskola, fall 2020. The module is meant to be incorporated with the Anax framework.
+# Anax module for weather forecast and history
+This module can be incorporated with the [Anax framework](https://github.com/canax) to provide a service that checks weahter forecast and historical weather data
+based on ip-adress. The module was created as a part of the course Webbaserade ramverk och designmönster, Blekinge Tekniska Högskola.
 
-Usage
-Step 1: Install the module using composer.
-composer require artes/weather
 
-Step 2: Integrate the module into your Anax base by copying the necessary files
-# Go to the root of your Anax base repo and run these two commands
+# To install
+In your composer.json do:
 
-rsync -av vendor/asti/weather/config ./
+        composer require asti/weather
 
-rsync -av vendor/asti/weather/view ./
+# Integrate the module  
+## From the root of your Anax repo run:
 
-Run even these commands if you want to execute the unit tests of the module with make test from the root of you Anax base.
+#### Manually:
 
-rsync -av vendor/asti/weather/src ./
+        rsync -av vendor/asti/weather/config ./
 
-rsync -av vendor/asti/weather/test ./
+        rsync -av vendor/asti/weather/view ./
 
-Step 3: Add your API-keys
-The module makes use of ipstack and openweathermap to provide the user with information about a given IP-address or about a valid pair of geographical coordinates.
+        rsync -av vendor/asti/weather/src ./
 
-Create an account on both sites and save your API-keys in config/api/apikeys.php according to the instructions in the comments. If you miss this step certain classes may not work as expected.
+        rsync -av vendor/asti/weather/test ./
 
-Step 4: Protect your API-keys
-Update your .gitignore with the following line in your Anax base.
+#### Or simply: 
 
-/config/api
+        bash vendor/asti/weather/.anax/scaffold/postprocess.d/100_weather.bash
 
-Step 5: Update your navbar
+## Add API-key
+You need to use your own API key from [Open Weather](https://openweathermap.org/api). Add you key in the config/weather.php file as a value to the key "API-key".
+
+
+#### Update your .gitignore with the following line in your Anax base:
+
+/config/weather.php
+
+#### Update your navigation: 
 Add IP and Weather to your navbar via config/navbar/header.php and via config/navbar/responsive.php
 
 You will need to insert the following lines of code into the items-key in the above files.
 
-`<[
+        [
             "text" => "Väder",
             "url" => "weather",
             "title" => "Få väderprognos",
@@ -43,4 +47,4 @@ You will need to insert the following lines of code into the items-key in the ab
             "text" => "VäderAPI",
             "url" => "weather_api",
             "title" => "Få väderprognos",
-        ],>`
+        ],
