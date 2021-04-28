@@ -4,7 +4,7 @@ namespace Asti\WeatherPackage;
 
 use Anax\DI\DIFactoryConfig;
 use PHPUnit\Framework\TestCase;
-use Asti\WeatherPackage\WeatherServiceMock;
+use Asti\Weather\WeatherServiceMock;
 /**
  * Test WeatherService
  */

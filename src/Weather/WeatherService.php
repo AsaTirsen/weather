@@ -2,8 +2,8 @@
 
 namespace Asti\Weather;
 
-use Asti\Geoip\CurlService;
-use Asti\Ipcheck\HelperFunctions;
+use Asti\Weather\CurlService;
+use Asti\Weather\ApiDataProcessing;
 
 class WeatherService
 {
@@ -44,7 +44,7 @@ class WeatherService
     public function curlWeatherApi($lon, $lat) : array
     {
         $curl = new CurlService();
-        $help = new HelperFunctions();
+        $data = new ApiDataProcessing();
         $res = $curl->getDataThroughCurl($this->getUrl() . "?" . "lat=" . $lat . "&lon=" . $lon . "&units=metric" . "&lang=sv" . "&appid=" . $this->getKey());
         error_log(gettype($res));
         if (isset($res["cod"])) {
@@ -56,10 +56,10 @@ class WeatherService
                 "CurrentTemp" => substr($res["current"]["temp"], 0, 5),
                 "CurrentFeelsLike" => substr($res["current"]["feels_like"], 0, 5),
                 "CurrentWeather" => $res["current"]["weather"][0]["description"],
-                "DailyDates" => $help->loopThroughDate($res["daily"]),
-                "DailyTemperatures" => $help->loopThroughTemp($res["daily"], "temp", "day"),
-                "DailyFeelsLike" => $help->loopThroughTemp($res["daily"], "feels_like", "day"),
-                "DailyDescriptions" => $help->loopThroughDesc($res["daily"], "weather", "description")
+                "DailyDates" => $data->loopThroughDate($res["daily"]),
+                "DailyTemperatures" => $data->loopThroughTemp($res["daily"], "temp", "day"),
+                "DailyFeelsLike" => $data->loopThroughTemp($res["daily"], "feels_like", "day"),
+                "DailyDescriptions" => $data->loopThroughDesc($res["daily"], "weather", "description")
             ];
             return [$json];
         }
