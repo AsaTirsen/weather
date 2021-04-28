@@ -38,7 +38,7 @@ You will need to insert the following lines of code into the items-key in the ab
    "text" => "Väder",   
    "url" => "weather",  
    "title" => "Få väderprognos",  
- ],
+ >],
  >[
    "text" => "VäderAPI",
    "url" => "weather_api",
