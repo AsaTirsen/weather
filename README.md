@@ -34,13 +34,13 @@ Add IP and Weather to your navbar via config/navbar/header.php and via config/na
 
 You will need to insert the following lines of code into the items-key in the above files.
 
-[
-    "text" => "IP",
-    "url" => "ip/init",
-    "title" => "IP validator",
-],
-[
-    "text" => "Väder",
-    "url" => "weather",
-    "title" => "Väder API",
-],
+`<[
+            "text" => "Väder",
+            "url" => "weather",
+            "title" => "Få väderprognos",
+        ],
+        [
+            "text" => "VäderAPI",
+            "url" => "weather_api",
+            "title" => "Få väderprognos",
+        ],>`
