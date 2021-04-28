@@ -34,9 +34,9 @@ Add IP and Weather to your navbar via config/navbar/header.php and via config/na
 
 You will need to insert the following lines of code into the items-key in the above files.
 
-`[  
-            "text" => "Väder",  
-            "url" => "weather",  
+`[  <br />
+            "text" => "Väder", <br />  
+            "url" => "weather",  <br />
             "title" => "Få väderprognos",  
         ],
         [
