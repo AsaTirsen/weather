@@ -21,7 +21,7 @@ composer require asti/weather ^1.0.6
 
 ## Or simply: 
 
-bash vendor/asti/weather/.anax/scaffold/postprocess.d/100_weather.bash
+        bash vendor/asti/weather/.anax/scaffold/postprocess.d/100_weather.bash
 
 ## Add API-key
 You need to use your own API key from [Open Weather](https://openweathermap.org/api). Add you key in the config/weather.php file as a value to the key "API-key".
