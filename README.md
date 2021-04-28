@@ -4,7 +4,8 @@ based on ip-adress. The module was created as a part of the course Webbaserade r
 
 
 # To install
-In your composer.json do:   
+In your composer.json do:
+
         composer require asti/weather
 
 # Integrate the module  
