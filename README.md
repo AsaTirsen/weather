@@ -9,8 +9,9 @@ In your composer.json do:
         composer require asti/weather
 
 # Integrate the module  
-## Manually:
-#### From the root of your Anax repo run:
+## From the root of your Anax repo run:
+
+#### Manually:
 
         rsync -av vendor/asti/weather/config ./
 
@@ -20,7 +21,7 @@ In your composer.json do:
 
         rsync -av vendor/asti/weather/test ./
 
-## Or simply: 
+#### Or simply: 
 
         bash vendor/asti/weather/.anax/scaffold/postprocess.d/100_weather.bash
 
