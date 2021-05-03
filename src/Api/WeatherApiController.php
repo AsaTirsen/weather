@@ -28,13 +28,11 @@ class WeatherApiController implements ContainerInjectableInterface
         $weatherService = $this->di->get("weather");
         $ipAdress = $request->getPost("ipCheck");
         $res = $geoipService->curlIpApi($ipAdress);
-        var_dump($request->getPost());
 
         if (isset($res["Message"])) {
             return [$res];
         }
         if (in_array("Prognos", $request->getPost())) {
-            var_dump([$weatherService->curlWeatherApi($res[0]["Longitude"], $res[0]["Latitude"])]);
             return [$weatherService->curlWeatherApi($res[0]["Longitude"], $res[0]["Latitude"])];
         } elseif ((in_array("Äldre data", $request->getPost()))) {
             return [$weatherService->curlOldWeatherApi($res[0]["Longitude"], $res[0]["Latitude"])];
