@@ -24,7 +24,7 @@ class WeatherRequestController implements ContainerInjectableInterface
 
     public function indexAction(): object
     {
-        $ip = $_SERVER['REMOTE_ADDR'];
+        $ip = $_SERVER['REMOTE_ADDR'] ?? "127.0.0.1";
         $page = $this->di->get("page");
         $data = [
             "ipAdress" => $ip

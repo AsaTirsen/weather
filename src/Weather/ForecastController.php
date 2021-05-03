@@ -2,8 +2,6 @@
 
 namespace Asti\Weather;
 
-use Asti\Geoip\GeoipService;
-use Asti\Ipcheck\HelperFunctions;
 use Anax\Commons\ContainerInjectableInterface;
 use Anax\Commons\ContainerInjectableTrait;
 
@@ -29,13 +27,14 @@ class ForecastController implements ContainerInjectableInterface
         $page = $this->di->get("page");
         $request = $this->di->get("request");
         $getParams = $request->getGet();
-        $geoipService = $this->di->get("geoip");
+        $locationService = $this->di->get("location");
         $weatherService = $this->di->get("weather");
         $resIp = null;
         $resWeather = null;
         if ($getParams) {
             $ipAdr = $getParams["ipCheck"];
-            $resIp = $geoipService->curlIpApi($ipAdr);
+            $type = $getParams["type"];
+            $resIp = $locationService->curlIpApi($ipAdr);
             if (isset($resIp["Message"])) {
                 $data = [
                     "ErrorMsg" => $resIp["Message"]
@@ -52,7 +51,7 @@ class ForecastController implements ContainerInjectableInterface
                 $page->add("weather/weather_search", $data);
                 return $page->render($data);
             }
-            elseif (isset($ipAdr) && isset($resWeather) && in_array("Prognos", $getParams)) {
+            elseif (isset($ipAdr) && isset($resWeather) && $type == "Prognos") {
                 $data = [
                     "long" => $resIp[0]["Longitude"],
                     "lat" => $resIp[0]["Latitude"],
@@ -66,7 +65,7 @@ class ForecastController implements ContainerInjectableInterface
                 ];
                 $page->add("weather/weather_forecast", [$data]);
                 return $page->render([$data]);
-            } elseif (isset($ipAdr) && isset($resWeather) && in_array("Äldre data", $getParams)) {
+            } elseif (isset($ipAdr) && isset($resWeather) && $type == "Äldre data") {
                 $resWeather = $weatherService->curlOldWeatherApi($resIp[0]["Longitude"], $resIp[0]["Latitude"]);
                 $data = [
                     "long" => $resIp[0]["Longitude"],
@@ -98,8 +97,7 @@ class ForecastController implements ContainerInjectableInterface
             }
         }
         $data = [
-//            "ipAdress" => $_SERVER['REMOTE_ADDR'],
-            "ipAdress" => "82.183.6.103",
+            "ipAdress" => $_SERVER['REMOTE_ADDR'] ?? "127.0.0.1"
         ];
         $page->add("weather/weather_search", $data);
         return $page->render($data);

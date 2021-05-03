@@ -17,7 +17,7 @@ if (isset($data["ErrorMsg"])) : ?>
             <p>
                 <label>Skriv IP-adress för stället du vill ha väder för:</label>
                 <label>
-                    <input type="text" name="ipCheck" value="<?= $ipAdress?>"/>
+                    <input type="text" name="ipCheck" value="<?= $ipAdress ?? null?>"/>
                 </label>
             </p>
             <p>

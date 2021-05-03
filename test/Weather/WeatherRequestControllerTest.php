@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * Test the SampleController.
  */
-class ForecastControllerTest extends TestCase
+class WeatherRequestControllerTest extends TestCase
 {
     protected $di;
     /**
@@ -29,7 +29,7 @@ class ForecastControllerTest extends TestCase
         $di = $this->di;
 
         // Setup the controller
-        $this->controller = new ForecastController();
+        $this->controller = new WeatherRequestController();
         $this->controller->setDI($this->di);
     }
 
@@ -37,22 +37,11 @@ class ForecastControllerTest extends TestCase
      * Test the route "index".
      */
 
-    public function testIndexAction() {
+    public function testIndexAction()
+    {
         $request = $this->di->get("request");
         $this->di->set("request", $request);
-        $request->setGet("ipCheck", "82.183.6.103");
-        $request->setGet("type", "Prognos");
-        $resForecast = $this->controller->indexAction();
-        $this->assertIsObject($resForecast);
-        $request->setGet("ipCheck", "172.217.14.196");
-        $request->setGet("type", "Äldre data");
-        $resHistoric = $this->controller->indexAction();
-        $this->assertIsObject($resHistoric);
-        $request->setGet("ipCheck", "172.217.1");
-        $resError = $this->controller->indexAction();
-        $this->assertIsObject($resError);
-        $request->setGet("");
-        $resError = $this->controller->indexAction();
-        $this->assertIsObject($resError);
+        $page = $this->controller->indexAction();
+        $this->assertIsObject($page);
     }
 }

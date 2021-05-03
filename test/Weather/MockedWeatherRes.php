@@ -1,5 +1,5 @@
 <?php
-namespace Asti\WeatherPackage;
+namespace Asti\Weather;
 
 use Anax\DI\DIFactoryConfig;
 use Anax\Request\Request;
@@ -18,6 +18,62 @@ class MockedWeatherRes
 EOD;
         return $data;
     }
-}
 
+    public function curlWeatherApi() : array
+    {
+        $data = [];
+        $data[] = <<<EOD
+{
+        "CurrentTemp": "8.58",
+        "CurrentFeelsLike": "7.09",
+        "CurrentWeather": "lätt molnighet",
+        "DailyDates": [
+            "2021-05-03",
+            "2021-05-04",
+            "2021-05-05",
+            "2021-05-06",
+            "2021-05-07",
+            "2021-05-08",
+            "2021-05-09",
+            "2021-05-10"
+        ],
+        "DailyTemperatures": [
+            "11.4",
+            "17.3",
+            "20.65",
+            "11.04",
+            "9.83",
+            "12.32",
+            "11.35",
+            "14.13"
+        ],
+        "DailyFeelsLike": [
+            "10.48",
+            "16.29",
+            "19.61",
+            "10.39",
+            "7.87",
+            "11.04",
+            "10.79",
+            "13.09"
+        ],
+        "DailyDescriptions": [
+            "lätt regn",
+            "molnigt",
+            "mulet",
+            "lätt regn",
+            "något regn",
+            "lätt regn",
+            "något regn",
+            "lätt regn"
+        ]
+    }EOD;
+        return $data;
+    }
+}
+EOD;
+        return $data;
+    }
+
+}
 

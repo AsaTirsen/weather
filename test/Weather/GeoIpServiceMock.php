@@ -2,11 +2,10 @@
 
 namespace Asti\Weather;
 
-use Asti\Mock\ipResMock;
-use Asti\Geoip\GeoipService;
+use Asti\Weather\ipResMock;
 
 
-class GeoIpServiceMock extends GeoipService
+class ServiceMock
 {
     public function curlIpApi($ipAdr): array
     {

@@ -1,10 +1,12 @@
 <?php
 
-namespace Asti\WeatherPackage;
+namespace Asti\Weather;
 
 use Anax\DI\DIFactoryConfig;
 use PHPUnit\Framework\TestCase;
 use Asti\Weather\WeatherServiceMock;
+use Asti\Weather\ApiDataProcessing;
+
 /**
  * Test WeatherService
  */
@@ -45,7 +47,7 @@ EOD;
     }
     public function curlWeatherApi() : array
     {
-        $help = new HelperFunctions();
+        $data = new ApiDataProcessing();
         $res = $this->getDataThroughCurl();
         if (isset($res["cod"])) {
             return [
@@ -56,10 +58,10 @@ EOD;
                 "CurrentTemp" => substr($res["current"]["temp"], 0, 5),
                 "CurrentFeelsLike" => substr($res["current"]["feels_like"], 0, 5),
                 "CurrentWeather" => $res["current"]["weather"][0]["description"],
-                "DailyDates" => $help->loopThroughDate($res["daily"]),
-                "DailyTemperatures" => $help->loopThroughTemp($res["daily"], "temp", "day"),
-                "DailyFeelsLike" => $help->loopThroughTemp($res["daily"], "feels_like", "day"),
-                "DailyDescriptions" => $help->loopThroughDesc($res["daily"], "weather", "description")
+                "DailyDates" => $data->loopThroughDate($res["daily"]),
+                "DailyTemperatures" => $data->loopThroughTemp($res["daily"], "temp", "day"),
+                "DailyFeelsLike" => $data->loopThroughTemp($res["daily"], "feels_like", "day"),
+                "DailyDescriptions" => $data->loopThroughDesc($res["daily"], "weather", "description")
             ];
             return [$json];
         }
