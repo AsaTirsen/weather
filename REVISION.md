@@ -1,33 +1,6 @@
 Revision History
 ===================
 
-
-
-v2.0.0 (2020-04-23)
--------------------
-
-* Correcting submissions from ht19, adding dbwebb gui.
-* Start preparing for ht20.
-
-
-
-v1.1.2 (2020-04-23)
--------------------
-
-* Freeze ht19 course.
-
-
-
-v1.1.1 (2019-10-29)
--------------------
-
-* Update Makefile.
-* Update versions of package.json.
-* Update example/redovisa.
-* Update example/redovisa/theme.
-
-
-
 v1.1.0 (2021-05-06)
 -------------------
 
