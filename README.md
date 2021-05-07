@@ -27,11 +27,15 @@ In your composer.json do:
 
 ## Add API-key
 You need to use your own API key from [Open Weather](https://openweathermap.org/api). Add you key in the config/weather.php file as a value to the key "API-key".
+You need to use your own API key from [IP stack](http://api.ipstack.com). Add you key in the config/location.php file as a value to the key "API-key".
+
 
 
 #### Update your .gitignore with the following line in your Anax base:
 
 /config/weather.php
+/config/location.php
+
 
 #### Update your navigation: 
 Add IP and Weather to your navbar via config/navbar/header.php and via config/navbar/responsive.php
