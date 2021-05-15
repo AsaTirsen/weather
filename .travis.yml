@@ -19,7 +19,7 @@ before_script:
     - make install
 
 script:
-    - check
+    - make check
     - make test
 
 # notifications:
