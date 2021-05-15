@@ -7,10 +7,9 @@ php:
 
 env:
     global:
-        -XDEBUG_MODE=coverage
+        - XDEBUG_MODE=coverage
 
-os:
-    - osx
+os: osx
 
 matrix:
     allow_failures:
