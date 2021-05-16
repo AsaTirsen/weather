@@ -23,7 +23,8 @@ class ForecastControllerTest extends TestCase
         $this->di->loadServices(ANAX_INSTALL_PATH . "/config/di");
 
         // Use a different cache dir for unit test
-        $this->di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache");
+        $this->di->get("cache")->setPath("./cache");
+        print_r("path" . "./cache");
 
         // View helpers uses the global $di so it needs its value
         $di = $this->di;
