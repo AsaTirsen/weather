@@ -18,7 +18,7 @@ git:
 before_script:
     - make install
     - mkdir -p /home/travis/build/AsaTirsen/weather/cache/anax
-    - chmod 777 -r /home/travis/build/AsaTirsen/weather/cache/anax
+    - chmod -R 777 /home/travis/build/AsaTirsen/weather/cache/anax
 
 script:
     - make check
