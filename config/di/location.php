@@ -28,8 +28,8 @@ return [
                 if ($settings["url"] ?? null) {
                     $locationService->setUrl($settings["url"]);
                 }
-                if ($settings["API-key"] ?? null) {
-                    $locationService->setKey($settings["API-key"]);
+                if ($settings["locationAPI-key"] ?? null) {
+                    $locationService->setKey($settings["locationAPI-key"]);
                 }
 
                 return $locationService;

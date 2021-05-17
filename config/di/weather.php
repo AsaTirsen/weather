@@ -26,8 +26,8 @@ return [
                 if ($settings["url"] ?? null) {
                     $weatherService->setUrl($settings["url"]);
                 }
-                if ($settings["API-key"] ?? null) {
-                    $weatherService->setKey($settings["API-key"]);
+                if ($settings["weatherAPI-key"] ?? null) {
+                    $weatherService->setKey($settings["weatherAPI-key"]);
                 }
 
                 return $weatherService;
