@@ -5,6 +5,10 @@ filter:
   excluded_paths: [vendor/*, test/*]
 
 build:
+  dependencies:
+    before:
+      - mkdir -p /home/scrutinizer/build/AsaTirsen/weather/cache/anax
+      - chmod -R 777 /home/scrutinizer/build/AsaTirsen/weather/cache/anax
   nodes:
     analysis:
       tests:
