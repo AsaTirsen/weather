@@ -7,8 +7,8 @@ filter:
 build:
   dependencies:
     before:
-      - mkdir -p /home/scrutinizer/build/AsaTirsen/weather/cache/anax
-      - chmod -R 777 /home/scrutinizer/build/AsaTirsen/weather/cache/anax
+      - mkdir -p /home/scrutinizer/build/config/cache/anax
+      - chmod -R 777 /home/scrutinizer/build/config/cache/anax
   nodes:
     analysis:
       tests:
