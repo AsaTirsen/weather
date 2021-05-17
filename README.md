@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/AsaTirsen/weather.svg?branch=main)](https://travis-ci.org/AsaTirsen/weather)
+
 # Anax module for weather forecast and history
 This module can be incorporated with the [Anax framework](https://github.com/canax) to provide a service that checks weahter forecast and historical weather data
 based on ip-adress. The module was created as a part of the course Webbaserade ramverk och designmönster, Blekinge Tekniska Högskola.
