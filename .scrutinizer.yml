@@ -6,7 +6,7 @@ filter:
 
 build:
   nodes:
-
+    -
       cache:
         directories:
           - ~/.build/cache/anax
