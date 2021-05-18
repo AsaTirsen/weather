@@ -10,8 +10,8 @@ build:
       before:
         -
           commands:
-            - "mkdir build"
-            - "chmod -R 777 /build"
+            "mkdir build"
+            "chmod -R 777 /build"
 
 
     tests:
