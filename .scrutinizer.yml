@@ -8,15 +8,14 @@ build:
 
     dependencies:
       before:
-        - "mkdir build"
+        - "mkdir -p /home/scrutinizer/build/cache/anax"
 
     tests:
       before:
-        - "chmod -R 777 build"
+        - "chmod -R 777 /home/scrutinizer/build/cache/anax"
       override:
         -
           command: "make phpunit"
           coverage:
             file: "build/coverage.clover"
             format: "php-clover"
-
