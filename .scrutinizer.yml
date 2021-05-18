@@ -8,8 +8,7 @@ build:
 
     dependencies:
       before:
-        -
-          - "mkdir build"
+        - "mkdir build"
 
     tests:
       before:
