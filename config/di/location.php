@@ -26,8 +26,8 @@ return [
                 if ($settings["url"] ?? null) {
                     $locationService->setUrl($settings["url"]);
                 }
-                if ($settings["locationAPI-key"] ?? null) {
-                    $locationService->setKey($settings["locationAPI-key"]);
+                if ($settings["LOCATIONAPIKEY"] ?? null) {
+                    $locationService->setKey($settings["LOCATIONAPIKEY"]);
                 }
 
                 return $locationService;

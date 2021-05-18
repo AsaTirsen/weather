@@ -1,6 +1,6 @@
 <?php
 
 return [
-    "locationAPI-key" => "",
+    "LOCATIONAPIKEY" => "",
     "url" => "http://api.ipstack.com/"
 ];
