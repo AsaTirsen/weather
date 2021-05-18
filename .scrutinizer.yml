@@ -9,8 +9,8 @@ build:
     dependencies:
       before:
         -
-          command: "mkdir build"
-          - "chmod -R 777 /home/travis/build/AsaTirsen/weather/cache/anax"
+          - "mkdir build"
+          - "chmod -R 777 /build/cache/anax"
 
 
     tests:
