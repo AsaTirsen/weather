@@ -9,7 +9,8 @@ build:
     dependencies:
       before:
         -
-          command: "mkdir build && chmod -R 777 /build"
+          command: "mkdir build"
+          - "chmod -R 777 /build"
 
 
     tests:
