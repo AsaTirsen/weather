@@ -12,7 +12,7 @@ build:
 
     tests:
       before:
-        - "chmod -R 777 /build"
+        - "chmod -R 777 build"
       override:
         -
           command: "make phpunit"
