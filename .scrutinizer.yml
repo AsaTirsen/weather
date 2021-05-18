@@ -10,13 +10,8 @@ build:
       before:
         -
           command: "mkdir build"
-    analysis:
-      tests:
-        override:
-          - php-scrutinizer-run
 
-    tests-and-coverage:
-      tests:
+    tests:
         override:
           -
             command: "make phpunit"
