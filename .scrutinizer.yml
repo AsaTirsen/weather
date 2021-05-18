@@ -5,11 +5,11 @@ filter:
   excluded_paths: [vendor/*, test/*]
 
 build:
-  project_setup:
-    before:
-      - mkdir -p /home/scrutinizer/build/config/cache/anax
-      - chmod -R 777 /home/scrutinizer/build/config/cache/anax
   nodes:
+
+      cache:
+        directories:
+          - ~/.build/cache/anax
     analysis:
       tests:
         override:
