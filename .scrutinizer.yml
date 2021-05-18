@@ -9,12 +9,11 @@ build:
     dependencies:
       before:
         -
-          command:
-            "mkdir build"
-            "chmod -R 777 /build"
-
+          - "mkdir build"
 
     tests:
+      before:
+        - "chmod -R 777 /build"
         override:
           -
             command: "make phpunit"
