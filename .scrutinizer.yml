@@ -14,10 +14,10 @@ build:
     tests:
       before:
         - "chmod -R 777 /build"
-        override:
-          -
-            command: "make phpunit"
-            coverage:
-              file: "build/coverage.clover"
-              format: "php-clover"
+      override:
+        -
+          command: "make phpunit"
+          coverage:
+            file: "build/coverage.clover"
+            format: "php-clover"
 
