@@ -10,7 +10,7 @@ build:
       before:
         -
           command: "mkdir build"
-          "- chmod -R 777 /home/travis/build/AsaTirsen/weather/cache/anax
+          - "chmod -R 777 /home/travis/build/AsaTirsen/weather/cache/anax"
 
 
     tests:
