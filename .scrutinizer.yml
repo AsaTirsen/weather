@@ -5,11 +5,11 @@ filter:
   excluded_paths: [vendor/*, test/*]
 
 build:
-  nodes:
-    -
-      cache:
-        directories:
-          - ~/.build/cache/anax
+
+    dependencies:
+      before:
+        -
+          command: "mkdir build"
     analysis:
       tests:
         override:
