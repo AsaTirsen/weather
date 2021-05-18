@@ -9,7 +9,7 @@ build:
     dependencies:
       before:
         -
-          - "mkdir build"
+          - command: "mkdir build"
           - "chmod -R 777 /build/cache/anax"
 
 
