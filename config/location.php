@@ -1,8 +1,8 @@
 <?php
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(dirname(__FILE__)));
-if (isset($dotenv)){
-    $dotenv->load();
-}
+//$dotenv = Dotenv\Dotenv::createImmutable(dirname(dirname(__FILE__)));
+//if (isset($dotenv)){
+//    $dotenv->load();
+//}
 
 $locationApiKey = $_ENV['LOCATIONAPIKEY'];
 var_dump($locationApiKey);
