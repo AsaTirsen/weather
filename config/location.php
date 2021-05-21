@@ -1,12 +1,15 @@
 <?php
-//$dotenv = Dotenv\Dotenv::createMutable(dirname(dirname(__FILE__)));
-//if (isset($dotenv)){
-//    $dotenv->load();
-//}
-//$dotEnvArray = $dotenv->load();
-//$locationApiKey = getenv($dotEnvarray["LOCATIONAPIKEY"]);
+$dotenv = Dotenv\Dotenv::createMutable(dirname(dirname(__FILE__)));
 
-$locationApiKey = getenv("LOCATIONAPIKEY");
+$dotenv->load();
+
+if (isset($_ENV["LOCATIONAPIKEY"])) {
+    $locationApiKey = $_ENV["LOCATIONAPIKEY"];
+} else {
+    $locationApiKey = getenv("LOCATIONAPIKEY");
+}
+
+
 return [
     "LOCATIONAPIKEY" => $locationApiKey,
     "url" => "http://api.ipstack.com/"
