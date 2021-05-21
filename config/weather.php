@@ -3,7 +3,8 @@
 //if (isset($dotenv)){
 //    $dotenv->load();
 //}
-$weatherApiKey = $_ENV['WEATHERAPIKEY'];
+
+$weatherApiKey = getenv('WEATHERAPIKEY');
 return [
     "WEATHERAPIKEY" => $weatherApiKey,
     "url" => "http://api.openweathermap.org/data/2.5/onecall"
