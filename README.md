@@ -1,5 +1,14 @@
 [![Build Status](https://travis-ci.org/AsaTirsen/weather.svg?branch=main)](https://travis-ci.org/AsaTirsen/weather)
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/AsaTirsen/weather/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/AsaTirsen/weather/?branch=main)
+
+[![Code Coverage](https://scrutinizer-ci.com/g/AsaTirsen/weather/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/AsaTirsen/weather/?branch=main)
+
+[![Build Status](https://scrutinizer-ci.com/g/AsaTirsen/weather/badges/build.png?b=main)](https://scrutinizer-ci.com/g/AsaTirsen/weather/build-status/main)
+
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/AsaTirsen/weather/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/code-intelligence)
+
+
 # Anax module for weather forecast and history
 This module can be incorporated with the [Anax framework](https://github.com/canax) to provide a service that checks weahter forecast and historical weather data
 based on ip-adress. The module was created as a part of the course Webbaserade ramverk och designmönster, Blekinge Tekniska Högskola.
