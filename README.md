@@ -44,16 +44,14 @@ You need to use your own API key from [IP stack](http://api.ipstack.com). Add yo
 version 1.2.0
 You need to use your own API key from [Open Weather](https://openweathermap.org/api).
 You need to use your own API key from [IP stack](http://api.ipstack.com). 
+
+
 Create a weather/.env file and add your key value pairs like in the example:
-LOCATIONAPIKEY={your location api key}
+
+LOCATIONAPIKEY={your location api key}\
 WEATHERAPIKEY={your weather api key}
+
 Don't forget to att your .env to .gitignore
-
-
-#### Update your .gitignore with the following line in your Anax base:
-
-/config/weather.php
-/config/location.php
 
 
 #### Update your navigation: 

@@ -1,6 +1,12 @@
 Revision History
 ===================
 
+1.2.0 (2021-05-22)
+-------------------
+
+* Updated module for Travis and Scrutinizer
+
+
 v1.1.0 (2021-05-06)
 -------------------
 
