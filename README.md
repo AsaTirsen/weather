@@ -37,9 +37,17 @@ In your composer.json do:
         bash vendor/asti/weather/.anax/scaffold/postprocess.d/100_weather.bash
 
 ## Add API-key
+version 1.1.0
 You need to use your own API key from [Open Weather](https://openweathermap.org/api). Add you key in the config/weather.php file as a value to the key "API-key".
 You need to use your own API key from [IP stack](http://api.ipstack.com). Add you key in the config/location.php file as a value to the key "API-key".
 
+version 1.2.0
+You need to use your own API key from [Open Weather](https://openweathermap.org/api).
+You need to use your own API key from [IP stack](http://api.ipstack.com). 
+Create a weather/.env file and add your key value pairs like in the example:
+LOCATIONAPIKEY={your location api key}
+WEATHERAPIKEY={your weather api key}
+Don't forget to att your .env to .gitignore
 
 
 #### Update your .gitignore with the following line in your Anax base:
