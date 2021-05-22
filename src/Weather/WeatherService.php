@@ -46,7 +46,6 @@ class WeatherService
         $curl = new CurlService();
         $data = new ApiDataProcessing();
         $res = $curl->getDataThroughCurl($this->getUrl() . "?" . "lat=" . $lat . "&lon=" . $lon . "&units=metric" . "&lang=sv" . "&appid=" . $this->getKey());
-        error_log(gettype($res));
         if (isset($res["cod"])) {
             return [
                 "Error" => "Platsangivelse är fel"

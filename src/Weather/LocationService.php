@@ -44,7 +44,6 @@ class LocationService
         $curl = new CurlService();
         if ($ipAdr!= "") {
             $res = $curl->getDataThroughCurl($this->getUrl() . $ipAdr . "?access_key=" . $this->getKey());
-
             if ($res["type"] == null) {
                 $json = [
                     "Message" => "IP-adressen är fel. Försök igen!"

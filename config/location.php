@@ -1,14 +1,11 @@
 <?php
-$dotenv = Dotenv\Dotenv::createMutable(dirname(dirname(__FILE__)));
-
-$dotenv->load();
-
-if (isset($_ENV["LOCATIONAPIKEY"])) {
-    $locationApiKey = $_ENV["LOCATIONAPIKEY"];
+if (file_exists(ANAX_INSTALL_PATH . "/.env")) {
+    $dotenv = Dotenv\Dotenv::createMutable(dirname(dirname(__FILE__)));
+    $dotenv->load();
+    $locationApiKey = $_ENV['LOCATIONAPIKEY'];
 } else {
     $locationApiKey = getenv("LOCATIONAPIKEY");
 }
-
 
 return [
     "LOCATIONAPIKEY" => $locationApiKey,
