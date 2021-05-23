@@ -43,7 +43,7 @@ You need to use your own API key from [Open Weather](https://openweathermap.org/
 You need to use your own API key from [IP stack](http://api.ipstack.com). 
 
 
-Create a weather/.env file and add your key value pairs like in the example:
+Create a {your root directory}/.env file and add your key value pairs like in the example:
 
 LOCATIONAPIKEY={your location api key}\
 WEATHERAPIKEY={your weather api key}
