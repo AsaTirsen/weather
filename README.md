@@ -50,6 +50,9 @@ WEATHERAPIKEY={your weather api key}
 
 Don't forget to att your .env to .gitignore
 
+#### Update your config/page.php
+The module uses a very basic page layout anax/v2/layout/default. This can be changed in config/page.php to anax/v2/layout/dbwebb_se.
+
 
 #### Update your navigation: 
 Add IP and Weather to your navbar via config/navbar/header.php and via config/navbar/responsive.php
